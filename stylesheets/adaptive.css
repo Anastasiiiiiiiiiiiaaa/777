@@ -1,0 +1,55 @@
+@media screen and (min-width: 1921px) {
+  
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+
+}
+
+@media screen and (min-width: 769px) and (max-width: 1440px) {
+.t{
+    margin-top: 78vh;
+}
+.move{
+    margin-top: -8vh;
+}
+}
+
+@media screen and (min-width: 415px) and (max-width: 768px) {
+   
+    .t{
+        margin-top: 60vh;
+    }
+    .move{
+        margin-top: -19vh;
+    }
+    .gate{
+        width: 60%;
+    }
+    .polosa1{
+        margin-top: 10%;
+    }
+    .menu{
+        font-size: 3.5vw;
+    }
+}
+
+@media screen and (max-width: 414px) {
+
+    .t{
+        margin-top: 50vh;
+    }
+    .move{
+        margin-top: -30vh;
+    }
+    .gate{
+        width: 40%;
+    }
+    .polosa1{
+        margin-top: 9%;
+    }
+    .menu{
+        font-size: 5.5vw;
+    }
+    
+}

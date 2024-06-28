@@ -1,0 +1,838 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100vw;
+    display: block;
+    margin: 0 auto;
+    margin: 0;
+    padding: 0;
+    /* font-size: 0vw; */
+    background-color: black;
+}
+@font-face {
+    font-family: "Arial";
+    src: url("../fonts/Arial.ttf");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Arial bold";
+    src: url("../fonts/Arial_Bold.ttf");
+    font-style: normal;
+    font-weight: bold;
+}
+
+p, a{
+    font-family: Arial;
+    color: white;
+    font-weight: 900;
+    text-decoration: none;
+}
+.none{
+    display: none;
+}
+/* -------------------------------- main page ------------------------------------- */
+.fir{
+    overflow-y: hidden;
+    
+}
+.manifest{
+    position: absolute;
+    z-index: 10000;
+    width: 101vw;
+}
+.close{
+    position: absolute;
+    z-index: 10001;
+    margin-left: -8.5vw;
+    width: 2.5%;
+    margin-top: 25%;
+}
+.yes, .no{
+    position: absolute;
+    z-index: 10001;
+    margin-left: -96vw;
+    width: 2.5%;
+    margin-top: 23%;
+}
+.yes{
+    margin-top: 23.5%; 
+}
+#first{
+    width: 100%;
+}
+.burger{
+    position: absolute;
+    position: fixed;
+    z-index: 10;
+    display: block;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    mix-blend-mode: difference;
+}
+.menu{
+    font-size: 1.8vw;
+    margin-top: 0.5vh;
+    mix-blend-mode: difference;
+}
+.logo{
+    position: absolute;
+    position: fixed;
+    z-index: 10;
+    margin-top: 5.5vh;
+    margin-left: 47vw;
+    mix-blend-mode: difference;
+}
+.gate{
+    width: 78%;
+}
+.hidden{
+    display: none;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-right: 5vw;
+  }
+  .image-container {
+    width: auto;
+    height: auto;
+    margin-top: 0vw;
+  }
+  .image-container svg {
+    width: auto;
+  }
+  .image-container {
+    margin-top: 3vw;
+    height: 41.667vw;
+    width: 29.762vw;
+  }
+  .image-container:hover .gallery-image {
+    -webkit-clip-path: url(#mask2);
+    clip-path: url(#mask2);
+    filter: blur(0);
+  }
+  .gallery-image {
+    -webkit-clip-path: url(#mask1);
+    clip-path: url(#mask1);
+  }
+  
+  .gallery-image,
+  .gallery-image2 {
+    transition: -webkit-clip-path 1s ease-in-out;
+    transition: clip-path 1s ease-in-out;
+    transition: clip-path 1s ease-in-out, -webkit-clip-path 1s ease-in-out;
+    filter: blur(1px);
+    transition: filter 0.3s ease;
+  }
+  
+  .gallery-image {
+    -webkit-clip-path: url(#mask1);
+    clip-path: url(#mask1);
+  }
+
+
+
+
+@media (min-width: 1000px) {
+    html,body {
+        max-width:100vw;
+        max-height: 100vh;
+        width: 100vw;
+        height: 100vh
+    }
+}
+@media (pointer: fine) {
+    .nav-filter:hover {
+        opacity:1
+    }
+}
+.index-link-number .media-wrapper {
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    bottom: -.01em;
+    right: 0;
+    z-index: 1;
+    width: 100%
+}
+#index.show-media .index-link-number .media-wrapper,.index-link.is-active .index-link-number .media-wrapper {
+    opacity: 1
+}
+.index-link-number .media-wrapper .media {
+    width: 100%;
+    height: auto
+}
+.project .slide.is-active .media {
+    pointer-events: auto;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin: auto
+}
+#projects-animation .project:not(.is-active) .slide .media {
+    cursor: pointer
+}
+.project .slide .project-loader .media {
+    pointer-events: none;
+    transition: opacity .25s linear
+}
+
+#easter-egg .media-wrapper {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+    cursor: pointer;
+    left: -9999vw;
+    top: -9999vh;
+    transform: translate(-50%) translateY(-50%) scale(.125)
+}
+.hover{
+    display: none;
+}
+
+
+.pictures{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+}
+.mainveb2{
+    margin-top: -30vh;
+    margin-left: 10vw;
+    width: 30%;
+    position: absolute;
+    animation-duration: 20s;
+  animation-name: veb2;
+  animation-iteration-count:infinite;
+}
+.mainposter{
+    margin-top: 70vh;
+    margin-left: 45vw;
+    width: 25%;
+    animation-duration: 40s;
+  animation-name: poster;
+  position: absolute;
+  animation-iteration-count:infinite;
+
+
+}
+.mainshop{
+    margin-top: 10vh;
+    margin-left: 60vw;
+    width: 50%;
+    position: absolute;
+    animation-duration: 20s;
+  animation-name: shop;
+    animation-iteration-count:infinite;
+}
+.mainpers{
+    margin-top: 40vh;
+    margin-left: 35vw;
+    width: 45%;
+    position: absolute;
+    z-index: 7000;
+    animation-duration: 20s;
+  animation-name: pers;
+  position: absolute;
+  animation-iteration-count:infinite;
+}
+.mainpretty{
+    margin-top: 50vh;
+    margin-left: 15vw;
+    width: 30%;
+    animation-duration: 20s;
+  animation-name: pretty;
+  position: absolute;
+  animation-iteration-count:infinite;
+
+}
+
+@keyframes veb2 {
+    0% {
+      margin-left: 10vw;
+    margin-top: -30vh;
+}
+50% {
+    margin-left: -10vw;
+    margin-top: -40vh;
+  }
+  100% {
+    margin-left: 10vw;
+    margin-top: -30vh;
+  }
+}
+@keyframes pretty {
+    0% {
+        margin-top: 50vh;
+        margin-left: 15vw;
+}
+50% {
+    margin-left: 35vw;
+    margin-top: 40vh;
+  }
+  100% {
+    margin-left: 50vw;
+    margin-top: 15vh;
+  }
+}
+
+@keyframes shop {
+    0% {
+        margin-top: 10vh;
+        margin-left: 60vw;
+}
+50% {
+    margin-left: 40vw;
+    margin-top: 0vh;
+  }
+  100% {
+    margin-left: 60vw;
+    margin-top: 10vh;
+  }
+}
+
+@keyframes pers {
+    0% {
+        margin-top: 40vh;
+        margin-left: 35vw;
+}
+50% {
+    margin-left: 15vw;
+    margin-top: 50vh;
+  }
+  100% {
+    margin-left: 35vw;
+    margin-top: 40vh;
+  }
+}
+
+
+@keyframes poster {
+    0% {
+        margin-top: 70vh;
+        margin-left: 45vw;
+}
+50% {
+    margin-left: 5vw;
+    margin-top: 50vh;
+  }
+  100% {
+    margin-left: 45vw;
+    margin-top: 70vh;
+  }
+}
+/* -------------------------------- book ------------------------------------- */
+
+
+.listalka {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5.2vw;
+    padding-right: 5.2vw;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
+
+.pages {
+    /* width: 40vw; */
+    width: 100vw;
+    display: block;
+    position: absolute;
+    z-index: 1;
+}
+
+.pages img{
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.pages img.activep {
+    display: block;
+}
+
+
+.backwards, .forwards {
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    mix-blend-mode: difference;
+    z-index: 200;
+
+}
+.forwards{
+    margin-left: 85.91vw;
+}
+
+#vertical {
+    width: 60vw;
+    margin-left: 17vw;
+    margin-top: 45vh;
+}
+#long{
+    width: 60vw;
+    margin-left: 11vw;
+    margin-top: 70vh;
+}
+.b5, .b6, .b7, .b8, .b9, .b10, .b11, .b12, .b13{
+    width: 50vw;
+    margin-left: 10vw;
+    margin-top: 7vh;
+
+}
+.b6{
+    margin-top: -1vh;
+}
+/* .b7{
+    width: 300vw;
+    height: 200vh;
+    margin-left: 10vw;
+} */
+.b9{
+    margin-left: 5vw;
+}
+.b10{
+    margin-left: 15vw;
+}
+.b11{
+    margin-left: 5.3vw;
+}
+.b13{
+    margin-left: 5.3vw;
+}
+.word1{
+    position: absolute;
+    width: 100vw;
+    margin-top: 27vh;
+    z-index: 5000;
+}
+.book{
+    width: 100%;
+    position: relative;
+    z-index: 6000;
+}
+.word2{
+    position: absolute;
+    width: 100vw;
+    /* margin-top: 31.25vh; */
+    margin-top: 36vh;
+    z-index: 5000;
+}
+.events{
+    width: 100%;
+    position: relative;
+    z-index: 6000;
+}
+.word3{
+    position: absolute;
+    width: 100vw;
+    /* margin-top: 31.25vh; */
+    margin-top: 24vh;
+    z-index: 5000;
+}
+.shop{
+    width: 100%;
+    position: relative;
+    z-index: 6000;
+}
+.word5{
+    position: absolute;
+    width: 100vw;
+    /* margin-top: 31.25vh; */
+    margin-top: 36vh;
+    z-index: 5000;
+}
+.ticket{
+    width: 100%;
+    position: relative;
+    z-index: 6000;
+}
+
+/* -------------------------------- events ------------------------------------- */
+
+.poster_description {
+    position: absolute;
+    width: 66vw;
+    top: 3.2vw;
+    right: 5vw;
+    display: flex;
+    align-items: end;
+    /* background-color: aqua; */
+}
+
+.poster {
+    width: 45vw;
+    display: block;
+    margin-top: 10vh;
+    /* background-color: blueviolet; */
+}
+
+.poster img {
+    display: none;
+    width: 100%;
+}
+
+#rectangle{
+    width: 66.6%;
+    margin-left: 8vw; 
+}
+
+.poster img.active {
+    display: block;
+}
+
+.book_description {
+    position: relative;
+    left: 2vw;
+    display: block;
+    margin-top: -100vh;
+}
+
+.book_description p {
+    display: none;
+    color: #ffffff;
+    width: 70%;
+    font-size: 1.8vw;
+    width: 100%;
+    text-align: left;
+
+}
+
+.book_description p.active {
+    display: block;
+    color: white;
+    text-align: left;
+
+}
+
+
+.move {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5.2vw;
+    padding-right: 5.2vw;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+
+}
+
+.next, .prev {
+    font-size: 2vw;
+    cursor: pointer;
+    user-select: none
+}
+
+/* -------------------------------- contact ------------------------------------- */
+.information{
+    position: absolute;
+    display: block;
+    margin-top: 5.5vh;
+    margin-left: 31vw;
+}
+.info{
+    font-size: 1.6vw;
+    line-height: 1.15;
+}
+.top{
+    margin-top: 3vh;
+}
+.con, .fon{
+    width: 108vw;
+    height: 100vh;
+}
+.con{
+    /* position: relative;
+    z-index: 1; */
+    position: absolute;
+}
+.word{
+    position: absolute;
+    width: 100vw;
+    /* margin-top: 31.25vh; */
+    margin-top: 36vh;
+    z-index: 5000;
+}
+.contact{
+    width: 100%;
+    position: relative;
+    z-index: 6000;
+}
+
+.form {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 70%;
+    height: 75%;
+    overflow: hidden;
+    margin-top: 13vh;
+    margin-left: 20vw;
+    z-index: 1;
+}
+.form_content {
+    background-color: black;
+    /* margin: 2.3% auto; */
+    padding: 3vh;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    display: none;
+}
+  
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+#full_form{
+    margin-top: 5.5vh;
+    width: 100%;
+}
+.form p{
+    color: #ffffff;
+    width: 70%;
+    font-size: 1.8vw;
+}  
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+  input[type="text"] {
+    position: relative;
+    width: 18vw;
+    border: none;
+    background-color: black;
+    /* border-bottom: 0.18vw solid #101027; */
+    font-size: 2rem;
+    color: #ff0000;
+    padding-left: 0.6vw;
+    height: 6vh;
+    outline: none;
+  }
+  
+  input[type="text"]#more {
+    height: 1vh;
+    vertical-align: bottom;
+    padding-top: 0vw;
+  }
+  
+  input[type="submit"] {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 1.8vw;
+    border: none;
+    width: 30%;
+    padding: 1.6vh 2vw;
+    margin: 0.8vh 0;
+  }
+  
+  .input-container,
+  .input-container-vertical {
+    align-items: center;
+    margin-bottom: 1vh;
+    border-bottom: 2px solid #ffffff;
+  }
+  
+  .input-container {
+    display: flex;
+    width: 70%;
+  }
+  
+  .input-container-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .input-container label,
+  .input-container input,
+  textarea#more {
+    font-size: 1.8vw;
+    color: #101027;
+    font-family: Arial;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    text-decoration: none;
+}
+  
+  .input-container label {
+    margin-right: 1vh;
+    color: rgb(255, 255, 255);
+  }
+  
+  .input-container input {
+    flex-grow: 1;
+    border: none;
+    
+  }
+  
+  textarea#more {
+    width: 100%;
+    height: 8.929vw;
+    padding: 0.3vw 0.2vw;
+    /* margin-top: 5%; */
+    resize: none;
+    outline: none;
+    border: none;
+    font-family: Arial;
+    font-weight: 900;
+    background-color: black;
+    color: white;
+  }
+  .block{
+    display: block;
+  }
+  
+  
+  /* -------------------------------- shop ------------------------------------- */
+  
+.real{
+    display: block;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.polosa1{
+    display: flex;
+}
+.tovar img{
+    width: 100%;
+}
+.tovar{
+    margin: 0 2%;
+
+}
+.chif{
+    display: flex;
+    justify-content: space-between;
+    /* padding-left: 5.2vw;
+    padding-right: 5.2vw; */
+    /* text-align: left; */
+    text-align: left;
+    margin: 0 2.5%;
+    font-size: 1.8vw;
+
+
+}
+.chif p{
+    text-align: right;
+}
+
+  /* -------------------------------- teleport ------------------------------------- */
+  .pere{
+    /* width: 100%;
+    position: absolute;
+    z-index: 1; */
+    display: block;
+    width: 100%;
+
+  }
+  .t1, .t2{
+    position: absolute;
+    width: 70vw;
+    margin-left: 20vw;
+    margin-top: 20vh;
+  }
+  .t1{
+    z-index: 2;
+  }
+  .t2{
+    z-index: 1;
+  }
+
+  .t{
+    font-size: 1.8vw;
+    margin-top: 100vh;
+    margin-left: 20vw;
+    position: absolute;
+    z-index: 3;
+  }
+  .t{
+    margin-top: 80vh;
+  }
+
+
+
+
+
+
+.carousel{
+    width: 100%;
+    /* position: absxolute; */
+    /* z-index: 4000; */
+  }
+.e1, .e2, .e3, .e4, .e5, .e6, .e7, .e8, .e9 {
+    width: 20%;
+    mix-blend-mode: difference;
+    position: absolute;
+    z-index: 5000;
+}
+.e1{
+    margin-top: 90vh;
+}
+.e2{
+    margin-left: 20vw;
+    margin-top: 70vh;
+
+}
+.e3{
+    margin-left: 10vw;
+    margin-top: 50vh;
+}
+.e4{
+    margin-left: 60vw;
+    margin-top: 30vh;
+    width: 25%;
+}
+.e5{
+    margin-left: 65vw;
+    margin-top: 55vh;
+    width: 35%;
+}
+.e6{
+    margin-left: 10vw;
+    margin-top: 4vh;
+    width: 20%;
+}
+.e7{
+    margin-left: 5vw;
+    margin-top: 65vh;
+    width: 7%;
+}
+.e8{
+    margin-left: 65vw;
+    margin-top: 0vh;
+    width: 30%;
+}
+.e9{
+    margin-left: 60vw;
+    margin-top: -7vh;
+    width: 50%;
+}
+
